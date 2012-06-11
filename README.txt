@@ -14,9 +14,16 @@
  * mvn -Dandroid.device=usb android:run
    It runs! But when starting ElasticSearch I get classnotFoundExceptions 
    -> we need to fix this in proguard.cfg I guess?
-   06-11 23:59:56.597: ERROR/AndroidRuntime(21904):
-      Caused by: java.lang.NoClassDefFoundError: java.lang.management.ManagementFactory
    
+   ##
+   ERROR/AndroidRuntime(21904): java.lang.ExceptionInInitializerError
+   ERROR/AndroidRuntime(21904):   at org.elasticsearch.node.internal.InternalNode.<init>(InternalNode.java:114)
+   ERROR/AndroidRuntime(21904):   at org.elasticsearch.node.NodeBuilder.build(NodeBuilder.java:159)
+   ERROR/AndroidRuntime(21904):   at de.jetsli.elasticsearch4a.ElasticNode.start(ElasticNode.java:67)
+
+   ##
+   ERROR/AndroidRuntime(21904): Caused by: java.lang.NoClassDefFoundError: java.lang.management.ManagementFactory
+   ERROR/AndroidRuntime(21904):   at org.elasticsearch.monitor.jvm.JvmInfo.<clinit>(JvmInfo.java:46)
 
 [1]
 [INFO] warning: Ignoring InnerClasses attribute for an anonymous inner class
