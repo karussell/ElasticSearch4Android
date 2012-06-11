@@ -10,7 +10,9 @@
    But it successfully stores a jar, dex and apk file under target dir.
  * mvn -Dandroid.device=usb android:deploy
  * mvn -Dandroid.device=usb android:run
-   now I'm getting class not found exceptions -> we need to fix this in proguard.cfg I guess   
+   now I'm getting class not found exceptions -> we need to fix this in proguard.cfg I guess
+   06-11 23:59:56.597: ERROR/AndroidRuntime(21904): Caused by: java.lang.NoClassDefFoundError: java.lang.management.ManagementFactory
+   
 
 [1]
 [INFO] warning: Ignoring InnerClasses attribute for an anonymous inner class
