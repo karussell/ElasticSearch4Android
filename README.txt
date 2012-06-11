@@ -3,7 +3,7 @@
    sdk.dir=/path/to/android-sdk
  * Install Maven >= 3.0.3 or use NetBeans
  * download https://github.com/mosabua/maven-android-sdk-deployer and run:
-   export ANDROID_HOME=/home/peterk/Programme/android-sdk-linux_x86
+   export ANDROID_HOME=/path/to/android-sdk
    mvn install -P 2.2
 
  * mvn -DskipTests=true clean install # ERROR
