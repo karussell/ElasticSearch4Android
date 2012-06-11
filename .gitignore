@@ -1,0 +1,11 @@
+.*~
+*~
+TODO.txt
+es/data/
+es/logs/
+es/jetwickcluster
+target/
+*.log
+tmp.*
+tmp
+local.properties
