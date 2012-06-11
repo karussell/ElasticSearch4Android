@@ -6,12 +6,16 @@
    export ANDROID_HOME=/path/to/android-sdk
    mvn install -P 2.2
  * mvn -DskipTests=true clean install 
-   we get tons of warnings - see below [1] and we needed to increase the heap size to 2g.
-   But it successfully stores a jar, dex and apk file under target dir.
+   we get tons of warnings - see below [1] and 
+   we needed to increase the heap size to 2g (see pom.xml)
+   But it successfully stores a jar, dex and apk file under target dir,
+   yeah!
  * mvn -Dandroid.device=usb android:deploy
  * mvn -Dandroid.device=usb android:run
-   now I'm getting class not found exceptions -> we need to fix this in proguard.cfg I guess
-   06-11 23:59:56.597: ERROR/AndroidRuntime(21904): Caused by: java.lang.NoClassDefFoundError: java.lang.management.ManagementFactory
+   It runs! But when starting ElasticSearch I get classnotFoundExceptions 
+   -> we need to fix this in proguard.cfg I guess?
+   06-11 23:59:56.597: ERROR/AndroidRuntime(21904):
+      Caused by: java.lang.NoClassDefFoundError: java.lang.management.ManagementFactory
    
 
 [1]
